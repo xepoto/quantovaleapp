@@ -3,19 +3,22 @@ import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:dev/modelos/proprietario.dart';
 import 'package:dev/modelos/imovel.dart';
 
+import '../documentos_anexos/documentos_anexos.dart';
+
 import 'widgets/dropdown_customizado.dart';
 import 'widgets/campo_texto_customizado.dart';
 import 'widgets/informacoes_adicionais.dart';
-import 'widgets/popup_sucesso.dart';
+import '../widgets_compartilhados/popup_sucesso.dart';
 
-class FormDadosImovel extends StatefulWidget {
-  const FormDadosImovel({super.key});
+
+class TelaDadosImovel extends StatefulWidget {
+  const TelaDadosImovel({super.key});
 
   @override
-  State<FormDadosImovel> createState() => _FormDadosImovelState();
+  State<TelaDadosImovel> createState() => _TelaDadosImovelState();
 }
 
-class _FormDadosImovelState extends State<FormDadosImovel> {
+class _TelaDadosImovelState extends State<TelaDadosImovel> {
   final _formKey = GlobalKey<FormBuilderState>();
 
   @override
@@ -145,8 +148,10 @@ class _FormDadosImovelState extends State<FormDadosImovel> {
                 const SizedBox(height: 20),
                 InformacoesAdicionais(formKey: _formKey),
                 const SizedBox(height: 20),
+                Center( child:
                 ElevatedButton(
-                  child: const Text('Próximo'),
+
+                  child: const Text('Enviar informações'),
                   onPressed: () {
                     if (_formKey.currentState!.saveAndValidate()) {
                       final formDataValue = _formKey.currentState!.value;
@@ -198,7 +203,7 @@ class _FormDadosImovelState extends State<FormDadosImovel> {
                           agrupamento: agrupamentoImovel,
                           utilizacao: utilizacaoImovel);
 
-                      // Adiciona o imóvel ao proprietário
+                      // adiciona o imóvel ao proprietário
                       //proprietario.imoveis?.add(imovel);
 
                       print(imovel.bairro);
@@ -212,13 +217,14 @@ class _FormDadosImovelState extends State<FormDadosImovel> {
                         context: context,
                         builder: (BuildContext context) {
                           return const PopupSucesso(
-                            mensagem: 'O imóvel foi registrado com sucesso.',
+                            mensagem: 'Informações enviadas com sucesso.',
+                            proxTela: TelaDocumentosAnexos(),
                           );
                         },
                       );
                     }
                   },
-                ),
+                ),)
               ],
             ),
           ),

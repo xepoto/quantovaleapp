@@ -8,11 +8,11 @@ class DropdownCustomizado extends StatefulWidget {
   final List<String> options;
 
   const DropdownCustomizado({
-    Key? key,
+    super.key,
     required this.name,
     required this.labelText,
     required this.options,
-  }) : super(key: key);
+  });
 
   @override
   _DropdownCustomizadoState createState() => _DropdownCustomizadoState();

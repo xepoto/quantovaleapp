@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PopupSucesso extends StatelessWidget {
+  final Widget? proxTela;
   final String mensagem;
 
-  const PopupSucesso({super.key, required this.mensagem});
+  const PopupSucesso({super.key, required this.mensagem, this.proxTela});
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +20,13 @@ class PopupSucesso extends StatelessWidget {
       actions: <Widget>[
         TextButton(
           onPressed: () {
-            Navigator.of(context).pop(); // Fecha o popup
-            Navigator.of(context).pop(); // Volta para a tela anterior
+            Navigator.of(context).pop(); // fecha o popup
+            if (proxTela != null) {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => proxTela!),
+              ); // vai para a próxima tela se proxTela não for nulo
+            }
           },
           child: const Text('OK'),
         ),
