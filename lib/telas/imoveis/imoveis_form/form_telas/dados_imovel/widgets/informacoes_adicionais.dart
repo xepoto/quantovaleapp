@@ -33,6 +33,7 @@ class _InformacoesAdicionaisState extends State<InformacoesAdicionais> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
             child: FormBuilderRadioGroup<String>(
+              initialValue: 'Não',
               name: 'usar_tabela',
               decoration: const InputDecoration(
                 labelText: 'Usar tabela Ross Heidecke?',

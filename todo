@@ -1,0 +1,47 @@
+LOGIN
+
+    tirar "APP" do "bem vindo ao quanto vale app" V
+
+    login = cpf/email V
+
+    + link primeiro acesso (talvez fazer igual o de "Entrar" à esquerda dele V
+
+    botão login = entrar V
+
+
+
+HOME
+
+    imóveis cadastrados = avaliações em andamento V
+
+    + botão adicionar imovel, receber nome. V
+
+
+DETALHES IMOVEL
+
+    doc, dados, fotos, lista, enviar V
+
+    detalhes imovel = titulo(nome) do imovel V
+
+    tirar detalhes V
+
+    ultimo botão = adicionar para avaliação V?
+
+    botões
+
+        tirar editar V
+        estilizar (mesmo tamanho, etc) V
+
+
+    FORMS
+
+        dir - adicionar continuar V
+
+        esq - salvar V
+
+            sucesso - snackbar V
+
+
+    info. add = lista de verif. V
+
+

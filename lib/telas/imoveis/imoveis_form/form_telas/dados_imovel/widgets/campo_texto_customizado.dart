@@ -5,11 +5,13 @@ import 'package:form_builder_validators/form_builder_validators.dart';
 class CampoStringCustomizado extends StatelessWidget {
   final String name;
   final String labelText;
+  final String? valorInicial;
 
   const CampoStringCustomizado({
     Key? key,
     required this.name,
     required this.labelText,
+    this.valorInicial
   }) : super(key: key);
 
   @override
@@ -23,6 +25,7 @@ class CampoStringCustomizado extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: FormBuilderTextField(
+          initialValue: valorInicial,
           name: name,
           decoration: InputDecoration(
             labelText: labelText,
