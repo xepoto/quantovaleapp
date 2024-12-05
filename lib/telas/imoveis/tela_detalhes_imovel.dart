@@ -4,6 +4,7 @@ import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:quanto_vale_APP/modelos/imovel_model.dart';
+import 'package:quanto_vale_APP/telas/imoveis/botao_abrir_laudo.dart';
 import 'package:quanto_vale_APP/telas/imoveis/botao_download_laudo.dart';
 import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/documentos_anexos/documentos_anexos.dart';
 import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/dados_imovel/dados_imovel.dart';
@@ -221,7 +222,8 @@ class _DetalhesImovelState extends ConsumerState<TelaDetalhesImovel> {
                                         fontWeight: FontWeight.bold),
                                   )),
                           ),
-                          SizedBox(child: BotaoDownloadLaudo())
+                          SizedBox(height: 20),
+                          imovel.isConcluido! ? SizedBox(child: BotaoAbrirLaudo(assetPath: 'assets/LAUDO DE AVALIAÇÃO SIMPLIFICADO.pdf',)) : SizedBox()
                         ],
                       ),
                     ],
