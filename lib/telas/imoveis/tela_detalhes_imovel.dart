@@ -3,15 +3,15 @@ import 'package:dio/dio.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:quanto_vale_APP/modelos/imovel_model.dart';
-import 'package:quanto_vale_APP/telas/imoveis/botao_abrir_laudo.dart';
-import 'package:quanto_vale_APP/telas/imoveis/botao_download_laudo.dart';
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/documentos_anexos/documentos_anexos.dart';
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/dados_imovel/dados_imovel.dart';
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/fotos_videos/fotos_videos.dart';
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/lista_verificacoes/lista_verificacoes.dart';
-import 'package:quanto_vale_APP/telas/imoveis/tela_imoveis_home.dart';
-import 'package:quanto_vale_APP/telas/imoveis/widget_imagem_imovel.dart';
+import 'package:quanto_vale_app/modelos/imovel_model.dart';
+import 'package:quanto_vale_app/telas/imoveis/botao_abrir_laudo.dart';
+import 'package:quanto_vale_app/telas/imoveis/botao_download_laudo.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/documentos_anexos/documentos_anexos.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/dados_imovel/dados_imovel.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/fotos_videos/fotos_videos.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/lista_verificacoes/lista_verificacoes.dart';
+import 'package:quanto_vale_app/telas/imoveis/tela_imoveis_home.dart';
+import 'package:quanto_vale_app/telas/imoveis/widget_imagem_imovel.dart';
 
 class TelaDetalhesImovel extends ConsumerStatefulWidget {
   final String? idImovel;
@@ -199,7 +199,26 @@ class _DetalhesImovelState extends ConsumerState<TelaDetalhesImovel> {
                                               ),
                                               TextButton.icon(
                                                 onPressed: () {
-                                                  Navigator.of(context).pop();
+                                                  Navigator.of(context)
+                                                      .pushReplacement(
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            TelaImoveisHome()),
+                                                  );
+                                                  ScaffoldMessenger.of(
+                                                    Navigator.of(context)
+                                                        .overlay!
+                                                        .context,
+                                                  ).showSnackBar(
+                                                    const SnackBar(
+                                                      content: Text(
+                                                          'Enviado com sucesso!'),
+                                                      backgroundColor:
+                                                          Colors.green,
+                                                      duration:
+                                                          Duration(seconds: 2),
+                                                    ),
+                                                  );
                                                 },
                                                 icon: Icon(Icons.check,
                                                     color: Colors.green),
@@ -223,7 +242,13 @@ class _DetalhesImovelState extends ConsumerState<TelaDetalhesImovel> {
                                   )),
                           ),
                           SizedBox(height: 20),
-                          imovel.isConcluido! ? SizedBox(child: BotaoAbrirLaudo(assetPath: 'assets/LAUDO DE AVALIAÇÃO SIMPLIFICADO.pdf',)) : SizedBox()
+                          imovel.isConcluido!
+                              ? SizedBox(
+                                  child: BotaoAbrirLaudo(
+                                  assetPath:
+                                      'assets/LAUDO DE AVALIAÇÃO SIMPLIFICADO.pdf',
+                                ))
+                              : SizedBox()
                         ],
                       ),
                     ],

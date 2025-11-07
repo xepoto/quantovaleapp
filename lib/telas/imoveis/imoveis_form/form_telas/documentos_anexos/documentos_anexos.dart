@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart'; // Adicionei o Riverpod
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/dados_imovel/dados_imovel.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/dados_imovel/dados_imovel.dart';
 import '../../../../../modelos/imovel_model.dart';
 import '../../../tela_detalhes_imovel.dart';
 import '../FormBarraInferior.dart';

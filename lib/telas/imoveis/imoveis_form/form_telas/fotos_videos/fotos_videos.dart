@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'dart:io';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/lista_verificacoes/lista_verificacoes.dart';
-import 'package:quanto_vale_APP/telas/imoveis/tela_detalhes_imovel.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/lista_verificacoes/lista_verificacoes.dart';
+import 'package:quanto_vale_app/telas/imoveis/tela_detalhes_imovel.dart';
 
 import '../../../../../modelos/imovel_model.dart';
 import '../../form_models/imovel_model.dart';

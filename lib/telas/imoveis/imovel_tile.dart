@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quanto_vale_APP/telas/imoveis/widget_imagem_imovel.dart';
+import 'package:quanto_vale_app/telas/imoveis/widget_imagem_imovel.dart';
 
 class ImovelTile extends StatelessWidget {
   final String imagem;

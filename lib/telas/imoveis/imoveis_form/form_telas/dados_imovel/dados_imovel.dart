@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/FormBarraInferior.dart';
-import 'package:quanto_vale_APP/telas/imoveis/imoveis_form/form_telas/fotos_videos/fotos_videos.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/FormBarraInferior.dart';
+import 'package:quanto_vale_app/telas/imoveis/imoveis_form/form_telas/fotos_videos/fotos_videos.dart';
 
 import '../../../../../modelos/imovel_model.dart';
 import '../../../tela_detalhes_imovel.dart';

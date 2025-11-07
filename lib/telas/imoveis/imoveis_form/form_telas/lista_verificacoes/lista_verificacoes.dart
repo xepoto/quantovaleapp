@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:quanto_vale_APP/telas/imoveis/tela_detalhes_imovel.dart';
+import 'package:quanto_vale_app/telas/imoveis/tela_detalhes_imovel.dart';
 
 import '../../../../../modelos/imovel_model.dart';
 import '../FormBarraInferior.dart';

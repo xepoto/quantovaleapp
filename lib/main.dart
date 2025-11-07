@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:quanto_vale_APP/preferences/imoveis_preferences.dart';
-import 'package:quanto_vale_APP/telas/login/tela_login.dart';
+import 'package:quanto_vale_app/preferences/imoveis_preferences.dart';
+import 'package:quanto_vale_app/telas/login/tela_login.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
